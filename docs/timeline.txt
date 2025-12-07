@@ -1,0 +1,34 @@
+phase 1: project setup and connectivity - fullstack skeleton
+	- Initialize Vite frontend (React + TS)
+	- Initialize FastAPI backend
+	- Create test API endpoint /api/hello
+	- Connect frontend fetch to backend
+	- Setup CORS middleware
+
+phase 2: User and lobby system - create multiplayer lobby
+	- Player registration/login (local only)
+	- Display online players
+	- Create / join game rooms 
+
+phase 3: game logic and websockets - real time gameplay
+	- WebSocket endpoint in FastAPI
+	- React components for real-time updates
+	- Broadcast card movements and game events
+
+phase 4: persistence - storing game data
+	- Add SQLite/PostgreSQL
+	- Store users, games, match history
+	- Integrate ORM (SQLAlchemy/Tortoise ORM)
+
+phase 5: ui enhancements - polish the frontent 
+	- Animations for cards
+	- Chat & notifications
+	- Styling (Tailwind or CSS)
+
+phase 6: deployment and hosting 
+	- Deploy backend (Render, Railway, or Docker)
+	- Deploy frontend (Vercel, Netlify)
+	- Connect domain
+
+phase 7: testing
+	- yuck

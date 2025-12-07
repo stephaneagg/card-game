@@ -1,0 +1,35 @@
++---------------------+       HTTP / WebSocket     +---------------------+
+|  React Frontend     | <------------------------->|   FastAPI Backend   |
+|  (Vite + TS + SWC)  |                            |  (Python, Uvicorn)  |
++---------------------+                            +---------------------+
+          |                                                |
+          | REST API / WebSocket calls                     |
+          v                                                v
++---------------------+                             +---------------------+
+|  Components / UI    |                             |  API Endpoints      |
+| - Lobby             |                             | - /api/hello        |
+| - Game Table        |                             | - /api/lobby        |
+| - Player List       |                             | - /api/game         |
+| - Chat / Notifications |                          | - WebSocket /ws     |
++---------------------+                             +---------------------+
+          |                                                |
+          |                                                |
+          v                                                v
++---------------------+                             +---------------------+
+| State Management    |                             |  Database / Storage |
+| - React useState    |                             |  - SQLite / Postgres|
+| - React Context     |                             |  - Game state       |
+| - Redux (optional)  |                             |  - Player info      |
++---------------------+                             +---------------------+
+
+
+notes: 
+Frontend uses Vite + React + TypeScript
+
+Backend uses FastAPI + Uvicorn
+
+Communication: REST API for static data, WebSocket for real-time gameplay
+
+Database stores users, game state, game history
+
+Optional state management in React: Context or Redux
