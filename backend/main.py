@@ -59,7 +59,24 @@ def create_lobby(data: LobbyReq):
     }
     return {"lobby_id": lobby_id}
 
+@app.get("/lobby/")
+def list_lobbies():
+    return lobbies
 
+app.post("lobby/join")
+def join_lobby(data: LobbyReq):
+    # add lobby to lobby dict
+    lobby = lobbies[data.lobby_id]
+
+    # add player to lobby's list of players
+    lobby["players"].append(data.player_id)
+
+    if (len(lobby["players"]) > 6):
+        lobby["status"] = "full"
+    else:
+        lobby["status"] = 6-len(lobby["players"]) + " spot(s) left"
+
+    return {"lobby_id": data.lobby_id, "players": lobby["players", "status": ]}
 
 
 
